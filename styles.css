@@ -59,10 +59,10 @@ body {
     margin-top: 20px;
 }
 
-.social-icons .icon {
-    color: #ffffff;
-    margin-right: 10px;
-    text-decoration: none;
+.social-icons img {
+    width: 30px;  /* Set icon width */
+    height: 30px; /* Set icon height */
+    margin-right: 10px; /* Space between icons */
 }
 
 /* Main Content Styles */
@@ -174,4 +174,32 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
 }
